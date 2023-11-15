@@ -1,0 +1,86 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\geometry{left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
+\pagenumbering{gobble}
+\definecolor{primaryColor}{RGB}{0, 102, 204}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\newcommand{\sectiontitle}[1]{\vspace{2mm}{\color{primaryColor}\noindent\textbf{#1}}\vspace{2mm}\hrule\vspace{2mm}}
+\newcommand{\experience}[4]{\textbf{#1}, #2 \hfill \vspace{-4mm}#3\\#4\vspace{3mm}}
+
+\begin{document}
+
+\begin{center}
+    \LARGE{\textbf{\color{primaryColor}Roman Knyazhitskiy}}\\
+    \vspace{1mm}
+    \normalsize{Phone: (+31) 633287437 | Email: \href{mailto:mail@knyaz.tech}{mail@knyaz.tech} | Website: \href{https://knyaz.tech}{knyaz.tech}}\\
+\end{center}
+
+\sectiontitle{Professional Summary}
+\noindent
+Software Engineer and Researcher with a focus on AI, including machine learning, computer vision, and robotics. Passionate about developing solutions that are both innovative and applicable to real-world problems. I aim to contribute meaningfully to research and development teams, particularly in environments that value creativity and practical application.
+
+\sectiontitle{Work Experience}
+\noindent
+\experience{Head of AI}{Delft Mercurians}{05/10/2023 - Present}{
+    \begin{itemize}[noitemsep]
+        \item Led a team of 3 engineers in developing AI control systems for robotics competitions.
+        \item Spearheaded the creation of 'cotix', a continuous-time, differentiable simulator in JAX, providing the foundation for the implementation of more efficient learning algorithms.
+        \item Ensured that AI solutions were properly tested with CI/CD, runtime type checking, and heavy test suite, allowing for early detection of several critical bugs.
+    \end{itemize}
+}
+\experience{Software Engineer}{Delft Mercurians}{01/05/2023 - 05/10/2023}{
+    \begin{itemize}[noitemsep]
+        \item Developed sensor fusion toolkit for our wheeled platform, allowing for more accurate calibration of Kalman Filter.
+        \item Analyzed past movement data, establishing sensor fusion performance benchmarks, and improving overall system reliability.
+    \end{itemize}
+}
+\experience{Project Leader}{Sign Language Translator Application}{05/08/2021 - 15/10/2021}{
+    \begin{itemize}[noitemsep]
+        \item Led the development of a Sign Language Translation app, securing 2nd place in AIIJC out of 50+ teams.
+        \item Combined YOLO extracted representations with bidirectional LSTMs to achieve near-state-of-the-art results.
+    \end{itemize}
+}
+
+\sectiontitle{Education and Training}
+\noindent
+\textbf{BSc Computer Science and Engineering}, TU Delft \hfill 01/09/2022 - Present\\
+\vspace{-4mm}
+\begin{itemize}[noitemsep]
+    \item GPA: 9.5/10
+\end{itemize}
+
+\sectiontitle{Honours and Awards}
+\begin{itemize}[noitemsep]
+    \item 'Best Software Solution' award, RoboCup 2019 Sydney, for AI applications in robotics.
+    \item 1st place in RoboCup Junior Competitions (three times), competing against 10+ teams.
+    \item 2nd place in AIIJC with the sign language translation app.
+    \item 3rd place at Groningen Algorithmic Programming Contest.
+\end{itemize}
+
+\sectiontitle{Open Source Contributions}
+\begin{itemize}[noitemsep]
+    \item Contributed to jaxtyping, enabling IPython runtime type checking.
+    \item Enhanced functionalities in jaxtyping and Equinox, resolving multiple issues.
+    \item Authored a script for efficient OpenCV installation on Khadas VIM3.
+    \item Optimized the core mining algorithm of JSECoin, improving efficiency by an order of magnitude.
+\end{itemize}
+
+\sectiontitle{Skills}
+\begin{itemize}[noitemsep]
+    \item \textbf{Languages:} Russian (Native), English (Fluent)
+    \item \textbf{Soft Skills:} Team Leadership, Problem-Solving, Creative Thinking, Learning Agility
+    
+    \item \textbf{Machine Learning:} Equinox, PyTorch, JAX, OpenCV, HuggingFace, W\&B
+    \item \textbf{Programming Languages:} C/C++, Java, HTML/CSS/JavaScript, SQL, Rust, Python
+    \item \textbf{Other Tools:} git, flake8, ruff, containerd
+\end{itemize}
+
+\end{document}

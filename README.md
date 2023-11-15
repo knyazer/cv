@@ -1,6 +1,8 @@
 # Very simple CV implemented in LaTeX
 
-Self-contained, and short.
+[Click here to view the pdf](./cv.pdf)
+
+Self-contained, short, blue-ish.
 
 * Not using fancy fonts
 

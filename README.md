@@ -12,5 +12,12 @@ Self-contained, short, blue-ish.
 
 Just a CV. Just some words.
 
+```bash
+sudo apt install texlive-full
+sudo tlmgr init-usertree # on debian-based systems
+sudo tlmgr install fontawesome5
+pdflatex cv.tex
+```
+
 
 *Oh yeah, forgot to mention: this is actually my CV :)*

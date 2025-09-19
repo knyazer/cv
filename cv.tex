@@ -57,7 +57,10 @@
 
 \sectiontitle{Summary}
 \noindent
-Cambridge MPhil student combining deep technical expertise in JAX/PyTorch with real-world impact. Built differentiable simulators enabling more efficient RL algorithms, developed MPC systems improving robot trajectory accuracy, and contributed to major open-source ML libraries. Proven track record spans 10 years of robotics experience, from hackathon victories to published conference papers.
+MPhil student in Machine Learning at Cambridge with research experience in differentiable
+simulation, reinforcement learning, and control. Developed methods improving stability in
+BPTT, contributed to AutoML and meta-learning projects under Prof. Tom Viering, and
+co-authored papers under submission. Also maintain open-source contributions to JAX-based ML libraries.
 
 \vspace{-2mm}
 
@@ -78,32 +81,38 @@ Cambridge MPhil student combining deep technical expertise in JAX/PyTorch with r
 
 \entrytitle{Research Associate}{TU Delft}{03/2023 - 08/2025}
 \begin{details}
-    \item Maintained regular research engagement through weekly supervisory consultations.
+    \item Under supervision of Professor Tom Viering worked on several AutoML and Meta Learning
+    projects, including two yet to be published papers.
     \item Participated in departmental research meetings and academic discussions.
-    \item Advanced research competencies through active involvement in university research programs.
 \end{details}
 
-\entrytitle{Head of AI}{Delft Mercurians (Student Robotics Team)}{05/2023 - Present (Part-Time)}
+\entrytitle{Head of AI/Control}{Delft Mercurians (Student Robotics Team)}{05/2023 - 09/2025 (Part-Time)}
 \begin{details}
-    \item Led a team of 2-5 engineers in developing AI control systems for RoboCup competitions.
-    \item Designed and implemented a Model Predictive Control (MPC) system for robot trajectory optimization, significantly enhancing path-following accuracy and tactical execution.
-    \item Introduced a continuous-time, differentiable simulator in JAX, providing the foundation for the implementation of more efficient learning algorithms.
-    \item Ensured AI solution robustness via CI/CD, runtime type checking, and a comprehensive test suite.
-\end{details}
-
-\entrytitle{Software Engineer}{Delft Mercurians (Student Robotics Team)}{05/2023 - 10/2023}
-\begin{details}
-    \item Developed a sensor fusion toolkit for our wheeled platform, leading to more accurate Kalman Filter calibration.
-    \item Analyzed past movement data to establish sensor fusion performance benchmarks and improve system reliability.
+    \item Led a team of 2-5 engineers in developing AI control systems for RoboCup competition.
+    \item Designed and implemented a Model Predictive Control (MPC) system for real-time trajectory optimization.
+    \item Worked closely with the higher management to ensure adequate integration and planning.
+    \item Ensured AI solution robustness via runtime type checking, and a comprehensive test suite.
 \end{details}
 
 \vspace{-2mm}
+
+\sectiontitle{Publications}
+
+\vspace{-5mm}
+
+\renewcommand{\refname}{}
+\renewcommand{\refname}{\vspace{-\baselineskip}}
+
+\bibliographystyle{unsrt}
+\nocite{*}
+\bibliography{pub} 
+
+\vspace{-3mm}
 
 \sectiontitle{Honours and Awards}
 \begin{itemize}
     \item \textbf{1st Place}, Bunq Hackathon 6 (2025), team of 4 against 50+ teams with a prize of €30,000.
     \item \textbf{2nd Place \& Special Prize}, Epoch AI Hackathon (2024).
-    \item Recruited by San Francisco robotics startup for founding engineer role; prioritized continued education at Cambridge.
     \item \textbf{'Best Software Solution'} award, RoboCup World Championships, Sydney (2019).
     \item \textbf{1st Place}, RoboCup Junior National Competitions (2017, 2018, 2019).
 \end{itemize}
@@ -120,16 +129,13 @@ Cambridge MPhil student combining deep technical expertise in JAX/PyTorch with r
 
 \vspace{-2mm}
 
-\sectiontitle{Publications}
-\noindent
-\textbf{Knyazhitskiy, R.}, Van der Vaart, P.R. "A Simple Scaling Model for Bootstrapped DQN". Submitted to AAAI Conference on Artificial Intelligence (2025). Under review.
-
-\noindent
-Luijmes, J., Gielisse, A., \textbf{Knyazhitskiy, R.}, van Gemert, J. (2025). "ARC: Anchored Representation Clouds for High-Resolution INR Classification". \textit{Accepted at ICLR 2025 Workshop on Weight Space Learning}.
-
-\vspace{-2mm}
 
 \sectiontitle{Selected Projects}
+
+\entrytitle{High-Frequency Weather Forecasting}{Hierarchical Bayesian Models, CNF}{2025}
+\begin{details}
+    \item Developed hybrid forecasting system combining continuous normalizing flows with an autoregressive model for well-calibrated forecasting.
+\end{details}
 
 \entrytitle{Lyapunov Discounting for BPTT Optimization}{JAX, Differentiable Simulation}{2024}
 \begin{details}
@@ -141,24 +147,5 @@ Luijmes, J., Gielisse, A., \textbf{Knyazhitskiy, R.}, van Gemert, J. (2025). "AR
     \item Developed mutation testing library achieving 10-15x speedup over alternatives through novel partial parallelization strategies
 \end{details}
 
-\entrytitle{High-Frequency Weather Forecasting}{Hierarchical Bayesian Models, CNF}{2023}
-\begin{details}
-    \item Developed hybrid forecasting system combining continuous normalizing flows with autoregressive models for improved temporal resolution
-\end{details}
-
-\entrytitle{Quadrotor Control System}{C/C++, Embedded Systems}{2023}
-\begin{details}
-    \item Implemented low-level control algorithms with hardware integration for autonomous quadrotor flight control
-\end{details}
-
-\vspace{-2mm}
-
-\sectiontitle{Skills}
-\begin{itemize}
-    \item \textbf{Machine Learning:} JAX, Equinox, PyTorch, OpenCV
-    \item \textbf{Programming:} Python, Rust, C/C++, Full stack web development
-    \item \textbf{Robotics \& Hardware:} CAD (Autodesk Inventor/SolidWorks), embedded systems programming, sensor integration
-    \item \textbf{Tools:} Git, CI/CD, containerization
-\end{itemize}
 
 \end{document}

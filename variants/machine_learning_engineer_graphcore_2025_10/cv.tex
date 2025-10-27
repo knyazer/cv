@@ -54,7 +54,7 @@
 
 \sectiontitle{Summary}
 \noindent
-Machine Learning Engineer with expertise in PyTorch/JAX and deep learning fundamentals, specializing in model optimization and scaling. Experience developing efficient ML systems for robotics and reinforcement learning, with strong Python/C++ skills and contributions to open-source ML libraries. Research background in AutoML, Meta Learning, and LLM applications with publications in top-tier venues.
+Machine Learning Engineer with experience in PyTorch/JAX and deep learning. Developed ML systems for robotics and reinforcement learning, focusing on model optimization and scaling. Proficient in Rust/C++ for systems programming and contributed to open-source ML libraries. Research background in AutoML, Meta Learning, and LLM applications.
 
 \sectiontitle{Education}
 
@@ -69,18 +69,16 @@ Machine Learning Engineer with expertise in PyTorch/JAX and deep learning fundam
 
 \entrytitle{Research Associate}{TU Delft}{03/2023 - 08/2025}
 \begin{details}
-    \item Researched LLM applications including vulnerability detection and code generation
-    \item Investigated Prior-Data Fitted Networks (PFNs) and MCMC acceleration methods
-    \item Delivered talks on optimization methods including Adam's $L_\infty$ norm properties
-    \item Participated in academic discussions on diffusion models and Meta Learning
+    \item Researched LLM applications for code analysis and vulnerability detection
+    \item Investigated Prior-Data Fitted Networks and MCMC/VI hybrid methods
+    \item Delivered talks on optimization methods, induced norms and higher-order optimizers
 \end{details}
 
 \entrytitle{Machine Learning Engineer}{Delft Mercurians}{05/2023 - 09/2025}
 \begin{details}
-    \item Designed and implemented Model Predictive Control system for real-time trajectory optimization
-    \item Built JAX+Equinox differentiable simulator tailored for robotic systems
-    \item Integrated Python-based models into Rust codebase with communication protocols
-    \item Contributed to open-source JAX-based ML libraries during development
+    \item Implemented Model Predictive Control system for real-time trajectory optimization
+    \item Built JAX+Equinox differentiable simulator for robot dynamics
+    \item Integrated JAX ML models into Rust codebase with tokio threading
 \end{details}
 
 \sectiontitle{Publications}
@@ -96,43 +94,39 @@ Machine Learning Engineer with expertise in PyTorch/JAX and deep learning fundam
 
 \sectiontitle{Selected Projects}
 
-\entrytitle{Bootstrapped DQN Scaling Laws}{JAX, Deep RL Research}{2025}
+\entrytitle{Bootstrapped DQN Scaling Laws}{}{2025}
 \begin{details}
-    \item Conducted large-scale empirical study (>40,000 configurations) of ensemble-based exploration methods
-    \item Implemented Bootstrapped DQN and Randomized-Prior BDQN in JAX with multi-GPU support
-    \item Discovered scaling laws governing convergence, showing RP-BDQN solves ~1.5× harder tasks
-    \item Optimized training with XLA compilation, bfloat16 precision, and automatic multi-GPU sharding
+    \item Ran empirical study of bootstrap-based exploration across >40,000 configurations
+    \item Identified scaling law explaining 80\% of time-to-convergence variance
+    \item Implemented mixed precision training and automatic multi-GPU sharding
 \end{details}
 
-\entrytitle{Nano JAX GPT}{JAX, Equinox, Deep Learning}{2023}
+\entrytitle{Nano JAX GPT}{}{2023}
 \begin{details}
-    \item Implemented high-performance GPT transformer with custom Flash Attention in JAX
-    \item Supported distributed training across multiple accelerators using PositionalSharding
-    \item Explored optimization techniques including RoPE embeddings, RMSNorm, and early-exit decoding
-    \item Built training infrastructure with AdamW optimizer, gradient clipping, and checkpoint management
+    \item Implemented GPT with custom Flash Attention in JAX and multi-device sharding
+    \item Used optimization techniques including early-exit decoding and multi-token prediction
 \end{details}
 
-\entrytitle{IEFT-PFN: Inference Efficient Freeze-Thaw Prior Fitted Networks}{JAX, Equinox, Deep Learning}{2025}
+\entrytitle{IEFT-PFN: Inference Efficient Freeze-Thaw Prior Fitted Networks}{}{2025}
 \begin{details}
-    \item Developed transformer-based system for hyperparameter optimization using in-context learning
-    \item Implemented three hyperparameter weighting schemes for multi-curve aggregation
-    \item Achieved 15-20\% improvement over baseline through learned attention weighting
-    \item Optimized training with gradient accumulation and mixed precision handling
+    \item Built transformer system for hyperparameter optimization using in-context learning
+    \item Implemented three spatial weighting schemes for multi-curve aggregation
+    \item Obtained 15-20\% improvement over baseline with learned attention weighting
+    \item Used gradient accumulation and automatic mixed precision for training
 \end{details}
 
-\entrytitle{Weather forecasting and option trading system}{Python, JAX/Equinox, Machine Learning}{2025}
+\entrytitle{Weather forecasting and option trading system}{}{2025}
 \begin{details}
-    \item Developed end-to-end algorithmic trading system integrating probabilistic ML models
-    \item Implemented Continuous Normalizing Flow model using neural ODEs for uncertainty-calibrated predictions
-    \item Designed frontier-based decision framework using epistemic uncertainty bounds
-    \item Leveraged JAX's XLA compilation and hardware acceleration for efficient training
+    \item Built algorithmic trading system integrating probabilistic ML models
+    \item Implemented Continuous Normalizing Flow with neural ODEs for uncertainty-calibrated predictions
+    \item Used imprecise probability bounds under Dempster-Shafer theory for decision-making
 \end{details}
 
 \sectiontitle{Open Source Contributions}
 \begin{itemize}
-    \item Enhanced functionalities in \href{https://github.com/google/jaxtyping}{jaxtyping} and \href{https://github.com/patrick-kidger/equinox}{Equinox}
+    \item Contributed features to \href{https://github.com/google/jaxtyping}{jaxtyping} and \href{https://github.com/patrick-kidger/equinox}{Equinox}
     \item Contributed to \href{https://github.com/RobertTLange/gymnax}{Gymnax}, a JAX RL environments collection
-    \item Improved libccd (collision detection library) fixing critical corner-case infinite loop
+    \item Fixed infinite loop bug in libccd collision detection library (C++)
 \end{itemize}
 
 \sectiontitle{Honours and Awards}

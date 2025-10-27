@@ -1,0 +1,46 @@
+**Job Title:** Machine Learning Engineer  
+**Company Name:** Graphcore  
+**Locations:** Bristol, UK; Cambridge, UK; London, UK  
+
+**About Graphcore:**  
+Graphcore is one of the world’s leading innovators in Artificial Intelligence compute. It develops hardware, software, and systems infrastructure to unlock the next generation of AI breakthroughs and power widespread AI adoption across industries. As part of the SoftBank Group, Graphcore shares a vision to enable Artificial Super Intelligence for everyone.  
+
+**The Role:**  
+As a Machine Learning Engineer in the Applied AI team, you will develop and optimize AI models for Graphcore’s specialized hardware. Collaborating with Software Development and Research teams, you will innovate and differentiate Graphcore’s technology.  
+
+**The Team:**  
+The Applied AI team acts as proxies for customers, ensuring Graphcore’s technology integrates seamlessly with the AI ecosystem. Responsibilities include building reference applications, optimizing kernels, and collaborating on novel AI research.  
+
+**Responsibilities and Duties:**  
+- Implement and optimize machine learning models for performance and accuracy, scaling to thousands of accelerators.  
+- Test and evaluate internal software releases, provide feedback, and conduct code reviews.  
+- Benchmark models to identify bottlenecks and improve efficiency.  
+- Design and conduct experiments on novel AI methods.  
+- Collaborate with Research, Software, and Product teams to define and test next-gen AI hardware.  
+- Engage with the AI community to stay updated on advancements.  
+
+**Candidate Profile:**  
+**Essential Skills:**  
+- Bachelor’s/Master’s/PhD in Machine Learning, Computer Science, Maths, Data Science, or related field.  
+- Proficiency in PyTorch/JAX.  
+- Strong Python development skills (C++/other languages a plus).  
+- Deep learning fundamentals: models, optimization, evaluation, and scaling.  
+- Ability to design, execute, and report ML experiments.  
+- Strong communication and collaboration skills.  
+
+**Desirable:**  
+- Experience in distributed training, large-scale ML models, production LLM systems, efficient computing, or generative models.  
+- Experience with C++/Triton/CUDA kernel optimization.  
+- Contributions to open-source projects or published research.  
+- Knowledge of cloud computing platforms.  
+- Interest in presenting/publishing in the AI community.  
+
+**Benefits:**  
+- Competitive salary, flexible working, generous leave policy.  
+- Private medical insurance, health cash plan, dental plan.  
+- Pension (matched up to 5%), life assurance, income protection.  
+- Parental leave, employee assistance program (health, mental wellbeing, bereavement support).  
+- Healthy food/snacks, barista bar in Bristol office.  
+- Inclusive work environment with equal opportunity policies.  
+
+*Note: Application form and unrelated content removed for clarity.*

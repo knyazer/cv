@@ -1,0 +1,145 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\geometry{left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
+\pagenumbering{gobble}
+\definecolor{primaryColor}{RGB}{0, 102, 204}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5ex}
+
+\newcommand{\entrytitle}[3]{
+    \noindent\textbf{#1}, #2\hfill#3
+}
+
+\newlist{details}{itemize}{1}
+\setlist[details]{
+    label=\textbullet,
+    leftmargin=1.5em,
+    topsep=0.2ex,
+    partopsep=-0pt,
+    itemsep=0.2ex,
+    parsep=0pt
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryColor,
+    filecolor=primaryColor,
+    urlcolor=primaryColor,
+    citecolor=primaryColor,
+}
+
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*}
+
+\newcommand{\sectiontitle}[1]{\vspace{3mm}{\color{primaryColor}\noindent\textbf{#1}}\vspace{1.5mm}\hrule\vspace{2mm}}
+\newcommand{\experience}[4]{\textbf{#1}, #2 \hfill \vspace{-4mm}#3\\#4\vspace{3mm}}
+
+\begin{document}
+
+\begin{center}
+    \LARGE{\textbf{\color{primaryColor}Roman Knyazhitskiy}}\\
+    \vspace{2mm}
+    \normalsize{
+        \faEnvelope~\href{mailto:cv@knyaz.tech}{cv@knyaz.tech} \quad|\quad
+        \faGlobe~\href{https://knyaz.tech}{knyaz.tech} \quad|\quad
+        \faGithub~\href{https://github.com/knyazer}{knyazer}
+    }
+\end{center}
+
+\sectiontitle{Summary}
+\noindent
+Machine Learning Engineer with expertise in PyTorch/JAX and deep learning fundamentals, specializing in model optimization and scaling. Experience developing efficient ML systems for robotics and reinforcement learning, with strong Python/C++ skills and contributions to open-source ML libraries. Research background in AutoML, Meta Learning, and LLM applications with publications in top-tier venues.
+
+\sectiontitle{Education}
+
+\entrytitle{MPhil in MLMI (Machine Learning)}{University of Cambridge}{10/2025 - 09/2026}
+
+\entrytitle{BSc Computer Science and Engineering}{TU Delft}{09/2022 - 07/2025}
+\begin{details}
+    \item GPA: 8.7/10. Cum Laude + Honours.
+\end{details}
+
+\sectiontitle{Work Experience}
+
+\entrytitle{Research Associate}{TU Delft}{03/2023 - 08/2025}
+\begin{details}
+    \item Researched LLM applications including vulnerability detection and code generation
+    \item Investigated Prior-Data Fitted Networks (PFNs) and MCMC acceleration methods
+    \item Delivered talks on optimization methods including Adam's $L_\infty$ norm properties
+    \item Participated in academic discussions on diffusion models and Meta Learning
+\end{details}
+
+\entrytitle{Machine Learning Engineer}{Delft Mercurians}{05/2023 - 09/2025}
+\begin{details}
+    \item Designed and implemented Model Predictive Control system for real-time trajectory optimization
+    \item Built JAX+Equinox differentiable simulator tailored for robotic systems
+    \item Integrated Python-based models into Rust codebase with communication protocols
+    \item Contributed to open-source JAX-based ML libraries during development
+\end{details}
+
+\sectiontitle{Publications}
+
+\vspace{-5mm}
+
+\renewcommand{\refname}{}
+\renewcommand{\refname}{\vspace{-\baselineskip}}
+
+\bibliographystyle{unsrt}
+\nocite{*}
+\bibliography{pub}
+
+\sectiontitle{Selected Projects}
+
+\entrytitle{Bootstrapped DQN Scaling Laws}{JAX, Deep RL Research}{2025}
+\begin{details}
+    \item Conducted large-scale empirical study (>40,000 configurations) of ensemble-based exploration methods
+    \item Implemented Bootstrapped DQN and Randomized-Prior BDQN in JAX with multi-GPU support
+    \item Discovered scaling laws governing convergence, showing RP-BDQN solves ~1.5× harder tasks
+    \item Optimized training with XLA compilation, bfloat16 precision, and automatic multi-GPU sharding
+\end{details}
+
+\entrytitle{Nano JAX GPT}{JAX, Equinox, Deep Learning}{2023}
+\begin{details}
+    \item Implemented high-performance GPT transformer with custom Flash Attention in JAX
+    \item Supported distributed training across multiple accelerators using PositionalSharding
+    \item Explored optimization techniques including RoPE embeddings, RMSNorm, and early-exit decoding
+    \item Built training infrastructure with AdamW optimizer, gradient clipping, and checkpoint management
+\end{details}
+
+\entrytitle{IEFT-PFN: Inference Efficient Freeze-Thaw Prior Fitted Networks}{JAX, Equinox, Deep Learning}{2025}
+\begin{details}
+    \item Developed transformer-based system for hyperparameter optimization using in-context learning
+    \item Implemented three hyperparameter weighting schemes for multi-curve aggregation
+    \item Achieved 15-20\% improvement over baseline through learned attention weighting
+    \item Optimized training with gradient accumulation and mixed precision handling
+\end{details}
+
+\entrytitle{Weather forecasting and option trading system}{Python, JAX/Equinox, Machine Learning}{2025}
+\begin{details}
+    \item Developed end-to-end algorithmic trading system integrating probabilistic ML models
+    \item Implemented Continuous Normalizing Flow model using neural ODEs for uncertainty-calibrated predictions
+    \item Designed frontier-based decision framework using epistemic uncertainty bounds
+    \item Leveraged JAX's XLA compilation and hardware acceleration for efficient training
+\end{details}
+
+\sectiontitle{Open Source Contributions}
+\begin{itemize}
+    \item Enhanced functionalities in \href{https://github.com/google/jaxtyping}{jaxtyping} and \href{https://github.com/patrick-kidger/equinox}{Equinox}
+    \item Contributed to \href{https://github.com/RobertTLange/gymnax}{Gymnax}, a JAX RL environments collection
+    \item Improved libccd (collision detection library) fixing critical corner-case infinite loop
+\end{itemize}
+
+\sectiontitle{Honours and Awards}
+\begin{itemize}
+    \item \textbf{1st Place}, Bunq Hackathon 6 (2025) -- Team of 4 against 50+ teams, €30,000 prize
+    \item \textbf{2nd Place \& Special Prize}, Epoch AI Hackathon (2024)
+    \item \textbf{Silver Medal}, AIIJC International AI Competition for Juniors
+\end{itemize}
+
+\end{document}

@@ -17,9 +17,7 @@ load_dotenv()
 
 # Model configuration
 LIGHTWEIGHT_MODEL = "deepseek/deepseek-chat-v3-0324"  # For extraction tasks
-HEAVY_DUTY_MODEL = (
-    LIGHTWEIGHT_MODEL  # "anthropic/claude-sonnet-4.5"  # For CV tailoring
-)
+HEAVY_DUTY_MODEL = "anthropic/claude-sonnet-4.5"  # For CV tailoring
 
 
 # Color output functions
@@ -250,6 +248,7 @@ CRITICAL RULES:
 5. The bibliography file (pub.bib) is provided for your reference so you understand what publications exist, but you MUST NOT modify the publications list or citations.
 6. "Lying" or inventing information is strictly forbidden and will result in rejection of the output.
 7. STRONGLY DISCOURAGED: Avoid changing LaTeX formatting, spacing, or structural commands (like \\sectiontitle, \\entrytitle, geometry settings, etc.). The existing formatting is carefully tuned and easy to break. Focus on content rather than presentation.
+8. Prefer to compress the CV to be as short as possible, but without losing important information.
 
 Your output must be valid LaTeX that can be directly compiled."""
 
@@ -380,13 +379,13 @@ def main():
     )
     args = parser.parse_args()
 
-    inform("Stage 1: Reading clipboard content...")
+    inform("Reading clipboard content...")
     position_text = get_clipboard_content()
     if not position_text:
         error("ERROR: Clipboard is empty.")
         return
 
-    inform(f"\nStage 2: Extracting position name (using {LIGHTWEIGHT_MODEL})...")
+    inform(f"\nExtracting position name (using {LIGHTWEIGHT_MODEL})...")
     position_name = extract_position_name(position_text)
     inform(f"Position: {position_name}")
 
@@ -423,13 +422,11 @@ def main():
             shutil.rmtree(new_variant_dir)
         inform(f"Using temporary directory: {new_variant_dir}")
 
-    inform(
-        f"\nStage 3: Extracting clean position content (using {LIGHTWEIGHT_MODEL})..."
-    )
+    inform(f"\nExtracting clean position content (using {LIGHTWEIGHT_MODEL})...")
     clean_position_text = extract_position_content(position_text)
     inform(f"Extracted {len(clean_position_text)} characters of position content")
 
-    inform(f"\nStage 4: Checking suitability (using {LIGHTWEIGHT_MODEL})...")
+    inform(f"\nChecking suitability (using {LIGHTWEIGHT_MODEL})...")
     main_cv_path = "cv.tex"
     is_suitable, reason = check_suitability(clean_position_text, main_cv_path)
 
@@ -445,11 +442,11 @@ def main():
             inform("\nAborted by user.")
             return
 
-    inform("\nStage 5: Finding existing CV variants...")
+    inform("\nFinding existing CV variants...")
     variants = find_variants(variants_dir)
     inform(f"Found {len(variants)} existing variants")
 
-    inform("\nStage 6: Finding similar variants...")
+    inform("\nFinding similar variants...")
     similar_variants = find_similar_variants(clean_position_text, variants)
     if similar_variants:
         inform(f"Found {len(similar_variants)} similar variants:")
@@ -458,13 +455,13 @@ def main():
     else:
         inform("No similar variants found")
 
-    inform(f"\nStage 7: Generating tailored CV using {args.model}...")
+    inform(f"\nGenerating tailored CV using {args.model}...")
     new_cv = generate_cv(
         clean_position_text, main_cv_path, similar_variants, args.model
     )
     success("CV generation complete!")
 
-    inform("\nStage 8: Saving CV variant...")
+    inform("\nSaving CV variant...")
     new_variant_dir.mkdir(parents=True, exist_ok=True)
 
     (new_variant_dir / "cv.tex").write_text(new_cv)
@@ -480,7 +477,7 @@ def main():
 
     inform(f"Variant saved to: {new_variant_dir}")
 
-    inform("\nStage 9: Generating PDF...")
+    inform("\nGenerating PDF...")
     try:
         pdf_path = generate_pdf(new_variant_dir)
         success(f"PDF generated successfully: {pdf_path}")
@@ -491,14 +488,25 @@ def main():
         error(traceback.format_exc())
         raise
 
-    # Always copy PDF to pdfs/ directory
-    inform("\nStage 10: Copying PDF to pdfs/ directory...")
+    # Link or copy PDF to pdfs/ directory
     pdfs_dir = Path("pdfs")
     pdfs_dir.mkdir(exist_ok=True)
-
     final_pdf_path = pdfs_dir / f"{summary_name}.pdf"
-    shutil.copy2(pdf_path, final_pdf_path)
-    success(f"PDF saved to: {final_pdf_path}")
+
+    if args.write:
+        # When storing variant, create symlink instead of copying
+        inform("\nLinking PDF to pdfs/ directory...")
+        # Remove existing symlink or file if it exists
+        if final_pdf_path.exists() or final_pdf_path.is_symlink():
+            final_pdf_path.unlink()
+        # Create symlink to the PDF in the variant directory
+        final_pdf_path.symlink_to(Path(pdf_path).resolve())
+        success(f"PDF linked to: {final_pdf_path}")
+    else:
+        # When using temp directory, copy the PDF before cleanup
+        inform("\nCopying PDF to pdfs/ directory...")
+        shutil.copy2(pdf_path, final_pdf_path)
+        success(f"PDF saved to: {final_pdf_path}")
 
     if args.write:
         success(f"\nSUCCESS: Generated new CV variant in: {new_variant_dir}")

@@ -1,0 +1,176 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\geometry{left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
+\pagenumbering{gobble}
+\definecolor{primaryColor}{RGB}{0, 102, 204}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5ex}
+
+\newcommand{\entrytitle}[3]{
+    \noindent\textbf{#1}, #2\hfill#3
+}
+
+\newlist{details}{itemize}{1}
+\setlist[details]{
+    label=\textbullet,
+    leftmargin=1.5em,
+    topsep=0.2ex,
+    partopsep=-0pt,
+    itemsep=0.2ex,
+    parsep=0pt
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryColor,
+    filecolor=primaryColor,
+    urlcolor=primaryColor,
+    citecolor=primaryColor,
+}
+
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*}
+
+\newcommand{\sectiontitle}[1]{\vspace{3mm}{\color{primaryColor}\noindent\textbf{#1}}\vspace{1.5mm}\hrule\vspace{2mm}}
+\newcommand{\experience}[4]{\textbf{#1}, #2 \hfill \vspace{-4mm}#3\\#4\vspace{3mm}}
+
+\begin{document}
+
+\begin{center}
+    \LARGE{\textbf{\color{primaryColor}Roman Knyazhitskiy}}\\
+    \vspace{2mm}
+    \normalsize{
+        \faEnvelope~\href{mailto:cv@knyaz.tech}{cv@knyaz.tech} \quad|\quad
+        \faGlobe~\href{https://knyaz.tech}{knyaz.tech} \quad|\quad
+        \faGithub~\href{https://github.com/knyazer}{knyazer}
+    }
+\end{center}
+
+\sectiontitle{Summary}
+\noindent
+Machine Learning Engineer with 2+ years experience building production ML systems in PyTorch/JAX. Strong track record of rapidly prototyping solutions, implementing ML algorithms from research papers, and iterating based on feedback. Proven ability to work autonomously, communicate complex ML concepts clearly to diverse teams, and deliver customer-driven results. Experience spans deep learning, reinforcement learning, and full-stack development with Python/C++.
+
+\vspace{-2mm}
+
+\sectiontitle{Work Experience}
+
+\entrytitle{Machine Learning Engineer}{Delft Mercurians}{05/2023 - 09/2025}
+\begin{details}
+    \item Led team of 2-5 engineers developing AI control systems, working autonomously on complex robotics problems.
+    \item Rapidly prototyped and implemented Model Predictive Control system for real-time optimization.
+    \item Built JAX+Equinox differentiable simulator from scratch, demonstrating ability to implement ML algorithms efficiently.
+    \item Integrated Python ML models into Rust production codebase, showing full-stack capabilities.
+    \item Developed PyQt interface for system calibration, reporting on key performance metrics.
+    \item Iterated on designs based on team feedback and competition results.
+\end{details}
+
+\entrytitle{Research Associate}{TU Delft}{03/2023 - 08/2025}
+\begin{details}
+    \item Implemented novel AutoML and Meta Learning algorithms, translating research papers into working prototypes.
+    \item Delivered technical talks explaining optimization methods to diverse audiences (Adam, Shampoo, diffusion models).
+    \item Collaborated with Professor Tom Viering on multiple research projects requiring clear communication and autonomous work.
+    \item Investigated Prior-Data Fitted Networks and MCMC methods, proposing improvements to existing algorithms.
+\end{details}
+
+\entrytitle{Applied Machine Learning Intern}{Central Robotics Institute}{06/2021 - 07/2021}
+\begin{details}
+    \item Developed production image processing tool for robotic applications from problem definition to deployment.
+    \item Implemented custom algorithms for image-to-line conversion and path optimization.
+    \item Delivered working solution within tight internship timeline, demonstrating ability to work fast.
+\end{details}
+
+\vspace{-2mm}
+
+\sectiontitle{Education}
+
+\entrytitle{MPhil in MLMI (Machine Learning)}{University of Cambridge}{10/2025 - 09/2026}
+
+\entrytitle{BSc Computer Science and Engineering}{TU Delft}{09/2022 - 07/2025}
+\begin{details}
+    \item GPA: 8.7/10. Cum Laude + Honours.
+\end{details}
+
+\vspace{-2mm}
+
+\sectiontitle{Selected Projects Demonstrating Key Skills}
+
+\entrytitle{IEFT-PFN: ML-Driven Hyperparameter Optimization}{PyTorch/JAX, Deep Learning}{2025}
+\begin{details}
+    \item Built transformer-based system from research paper, implementing novel architecture improvements.
+    \item Designed three experimental approaches to hyperparameter weighting, benchmarking each solution.
+    \item Achieved 15-20\% improvement over baseline through iterative experimentation and analysis.
+    \item Communicated results through comprehensive documentation and experimental reports.
+\end{details}
+
+\entrytitle{Bootstrapped DQN Scaling Study}{JAX, Deep RL}{2025}
+\begin{details}
+    \item Conducted large-scale empirical study (>40,000 configurations) to identify performance bottlenecks.
+    \item Implemented distributed training infrastructure with multi-GPU sharding for efficient experimentation.
+    \item Discovered unified scaling law explaining 80\% of convergence variance through systematic analysis.
+    \item Automated experiment pipeline with failure handling and adaptive scheduling.
+\end{details}
+
+\entrytitle{Nano JAX GPT}{JAX, Equinox}{2023}
+\begin{details}
+    \item Implemented GPT transformer from scratch with custom Flash Attention in JAX.
+    \item Prototyped multiple optimization techniques: early-exit decoding, RoPE embeddings, custom optimizers.
+    \item Demonstrated ability to quickly evaluate and iterate on different ML approaches.
+    \item Built production-grade training infrastructure with distributed support and checkpointing.
+\end{details}
+
+\entrytitle{Spectral: Speech Analysis Platform}{Python, TypeScript, Docker}{2024}
+\begin{details}
+    \item Designed and deployed full-stack microservices platform (FastAPI + SvelteKit) for clinical researchers.
+    \item Built plugin-based ML analysis framework integrating multiple acoustic processing models.
+    \item Demonstrated customer-driven development, working with end users to define requirements.
+    \item Delivered production system with Docker orchestration and single-command deployment.
+\end{details}
+
+\entrytitle{RFK: Pattern Matching Algorithm}{C++17/20, Algorithms}{2023}
+\begin{details}
+    \item Designed novel hash-based algorithm solving hard computational problem with provable complexity bounds.
+    \item Implemented 60+ benchmarks comparing against established solutions (Aho-Corasick, Wu-Manber).
+    \item Authored comprehensive research paper explaining algorithm and experimental methodology.
+    \item Applied SIMD optimization and cache-conscious design for production performance.
+\end{details}
+
+\vspace{-2mm}
+
+\sectiontitle{Publications}
+
+\vspace{-5mm}
+
+\renewcommand{\refname}{}
+\renewcommand{\refname}{\vspace{-\baselineskip}}
+
+\bibliographystyle{unsrt}
+\nocite{*}
+\bibliography{pub} 
+
+\vspace{-3mm}
+
+\sectiontitle{Open Source Contributions}
+\begin{itemize}
+    \item Enhanced \href{https://github.com/google/jaxtyping}{jaxtyping} and \href{https://github.com/patrick-kidger/equinox}{Equinox}, demonstrating ability to contribute to widely-used ML libraries.
+    \item Contributed to \href{https://github.com/RobertTLange/gymnax}{Gymnax} (800+ stars), improving JAX RL environments.
+    \item Built pytest plugin for beartype, showing full-stack Python development capabilities.
+    \item Fixed critical infinite loop bug in libccd collision detection library (C++).
+\end{itemize}
+
+\vspace{-2mm}
+
+\sectiontitle{Honours and Awards}
+\begin{itemize}
+    \item \textbf{1st Place}, Bunq Hackathon 6 (2025) -- Led team of 4 to victory against 50+ teams, €30,000 prize.
+    \item \textbf{2nd Place \& Special Prize}, Epoch AI Hackathon (2024) -- Rapid prototyping under time pressure.
+    \item \textbf{Best Software Solution}, RoboCup World Championships, Sydney (2019).
+    \item \textbf{Silver Medal}, AIIJC International AI Competition -- Sign language recognition application.
+\end{itemize}
+
+\end{document}

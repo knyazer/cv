@@ -1,0 +1,55 @@
+**Job Title:** Machine Learning Engineer at Kaedim  
+**Company Name:** Kaedim  
+**Salary Range:**  
+- San Francisco: $100k – $180k • 0.1% – 0.5%  
+- London: £45k – £80k  
+- Singapore: S$80k – S$145k  
+
+**Job Description:**  
+Kaedim is helping hundreds of game, product design, and e-commerce companies accelerate their 3D asset production pipelines. The company is profitable, has raised Series A funding from tier 1 Silicon Valley investors, and supports top-tier clients in gaming and e-commerce.  
+
+**Requirements:**  
+- Must be eager to be involved with both AI and product development.  
+- Must have prior experience or be willing to learn fast.  
+- Must be customer-driven.  
+- Must be driven to go above and beyond.  
+- Must be able to explain and communicate clearly.  
+- Must be able to work autonomously.  
+- Must want to work hard.  
+- Must be a strong communicator, capable of justifying decisions, proposing new ideas, and explaining ML concepts to the team.  
+
+**Responsibilities:**  
+- Coming up with solutions to hard problems.  
+- Making proof of concepts.  
+- Implementing improvements on existing ML algorithms.  
+- Bringing other team members up to speed.  
+- Reporting on key ML-related KPIs.  
+- Iterating based on customer feedback.  
+
+**Nice to Haves:**  
+- Experience with 3D modeling.  
+
+**Location:** Singapore, San Francisco, London  
+**Remote Work Policy:** In-office  
+**Job Type:** Full Time  
+**Visa Sponsorship:** Not Available  
+**Relocation:** Allowed  
+**Experience:** 2+ years  
+
+**Skills:**  
+- Python  
+- Machine Learning  
+- Full Stack Development  
+- Deep Learning  
+- PyTorch  
+
+**Benefits:**  
+- Health insurance  
+- Equity in Kaedim  
+- Office snacks and weekly boba runs  
+- Gym membership  
+
+**Company Overview:**  
+Kaedim combines AI and an in-house art team to deliver production-ready 3D models 10x faster. The company focuses on Games, Video Games, Artificial Intelligence, and Content Creators and has offices in San Francisco, Singapore, and London.  
+
+**Website:** [https://www.kaedim3d.com](https://www.kaedim3d.com)

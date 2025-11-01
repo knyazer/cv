@@ -17,7 +17,7 @@ load_dotenv()
 
 # Model configuration
 LIGHTWEIGHT_MODEL = "deepseek/deepseek-chat-v3-0324"  # For extraction tasks
-HEAVY_DUTY_MODEL = "anthropic/claude-sonnet-4.5"  # For CV tailoring
+HEAVY_DUTY_MODEL = "google/gemini-2.5-pro"  # For CV tailoring
 
 
 # Color output functions
@@ -228,7 +228,7 @@ def generate_cv(position_text, main_cv, similar_variants, model_name):
 
 CRITICAL RULES:
 1. Output ONLY the raw LaTeX code - no markdown code blocks, no explanations, no formatting markers like ```latex or ```.
-2. DO NOT invent, add, or modify ANY information that is not explicitly present in the main CV. This includes:
+2. DO NOT invent or add ANY information that is not explicitly present in the main CV. This includes:
    - Work experience details
    - Projects
    - Skills
@@ -239,6 +239,7 @@ CRITICAL RULES:
 4. You can ONLY:
    - Reorder sections to highlight most relevant experience (EXCEPT Education which must stay unchanged)
    - Adjust emphasis on certain bullet points in the Experience section
+   - Remove bullet points from any section, or compress/highlight bullet points anywhere to convey the suitability better
    - Rephrase existing content in the Experience section to better match the job description (without changing facts)
    - Modify the Summary section to align with the position
    - Select and emphasize relevant work experiences, projects, and skills
@@ -246,9 +247,10 @@ CRITICAL RULES:
    - SELECTIVELY INCLUDE OR EXCLUDE experiences based on relevance (e.g., include high school robotics experience like RoboCup for robotics positions where it might matter, but exclude it for pure software engineering positions, unless relevant)
    - Remove or condense less relevant experiences to make room for more pertinent ones
 5. The bibliography file (pub.bib) is provided for your reference so you understand what publications exist, but you MUST NOT modify the publications list or citations.
-6. "Lying" or inventing information is strictly forbidden and will result in rejection of the output.
+6. "Lying" or inventing information is strictly forbidden and will result in rejection of the output
 7. STRONGLY DISCOURAGED: Avoid changing LaTeX formatting, spacing, or structural commands (like \\sectiontitle, \\entrytitle, geometry settings, etc.). The existing formatting is carefully tuned and easy to break. Focus on content rather than presentation.
-8. Prefer to compress the CV to be as short as possible, but without losing important information.
+8. Prefer to compress the CV to be as short as possible, but without losing important information
+9. DO NOT use markdown syntax (e.g. **xyz**, _abc_, #heading). Use LaTeX, e.g. \\textbf{xyz}
 
 Your output must be valid LaTeX that can be directly compiled."""
 

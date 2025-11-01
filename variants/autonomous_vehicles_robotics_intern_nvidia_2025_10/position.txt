@@ -1,0 +1,37 @@
+**Job Title:** 2026 Internships: Autonomous Vehicles and Robotics - China  
+**Company:** NVIDIA  
+**Location:** China, Shanghai  
+
+### Job Description  
+NVIDIA pioneered accelerated computing to tackle challenges no one else can solve. Our work in AI and digital twins is transforming the world's largest industries and profoundly impacting society — from gaming to robotics, self-driving cars to life-saving healthcare, climate change to virtual worlds where we can all connect and create.  
+
+Our internships offer an excellent opportunity to expand your career and get hands-on experience with one of our industry-leading Autonomous Vehicles and Robotics teams. We’re seeking strategic, ambitious, hard-working, and creative individuals who are passionate about helping us tackle challenges no one else can solve.  
+
+### Potential Internships in this field include:  
+#### **Autonomous Vehicles**  
+- Developing and training state-of-the-art Deep Neural Networks for path generation  
+- Collecting training datasets and real-time inference run-times using simulators/gyms as well as performing in-vehicle tests  
+- Course or internship experience related to the following areas could be required: Computer Vision, Mapping, Localization, SLAM, Image Processing, Segmentation  
+
+#### **Robotics**  
+- Building the fundamental infrastructure and software platforms of our system, working at the very heart of the software system, which will power every robot and application built with Isaac  
+- Course or internship experience related to the following areas could be required: Robotics, Autonomous Vehicles, Validation Frameworks for Deep Learning, Operating Systems and Data Structures (threads, processes, memory, synchronization), Physics Simulation, Simulators, Computer Graphics, Version Control, Computer Vision, Cloud Technologies  
+
+### Requirements  
+- Must be actively enrolled in a university pursuing a Bachelor's, Master's, or PhD degree in Electrical Engineering, Computer Engineering, or a related field, for the entire duration of the internship.  
+- Depending on the internship role, prior experience or knowledge requirements could include the following programming skills and technologies:  
+  - C, C++, CUDA, ROS, Python, OpenGL, Linux  
+  - Sensor Input Devices (LiDAR, cameras, radars)  
+  - Training Frameworks (TensorFlow, Keras, PyTorch)  
+
+### Additional Information  
+Click [here](https://www.nvidia.com) to learn more about NVIDIA, our early talent programs, benefits offered to students, and other helpful student resources related to our latest technologies and endeavors.  
+
+**Skills:**  
+- Deep Learning  
+- PyTorch  
+- Artificial Intelligence  
+- Machine Learning  
+- Algorithms  
+- Robotics  
+- Python

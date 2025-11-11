@@ -251,6 +251,7 @@ CRITICAL RULES:
 7. STRONGLY DISCOURAGED: Avoid changing LaTeX formatting, spacing, or structural commands (like \\sectiontitle, \\entrytitle, geometry settings, etc.). The existing formatting is carefully tuned and easy to break. Focus on content rather than presentation.
 8. Prefer to compress the CV to be as short as possible, but without losing important information
 9. DO NOT use markdown syntax (e.g. **xyz**, _abc_, #heading). Use LaTeX, e.g. \\textbf{xyz}
+10. DO NOT mention the company name, or mention projects/results if they don't improve the overall picture. For example, you might want to mention "used AdamW with weight decay" only if the position is concerned with some research on precisely AdamW, since it's an assumption that everybody uses AdamW to train models these days.
 
 Your output must be valid LaTeX that can be directly compiled."""
 

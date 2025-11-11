@@ -23,3 +23,14 @@ Or, to build it quickly you can use `just`
 
 
 *Oh yeah, forgot to mention: this is actually my CV :)*
+
+## How to use
+
+Ask me, there is too much complex things involved
+
+but like, approximately:
+- put your openrouter key in `.env`
+- write your own cv in the `/cv.tex`
+- `rm -rf variants`
+
+then you can run `uv run tailor.py` or `uv run tailor.py --write`, where the first one generates just the pdf in `/pdfs`, and the second one dumps stuff into `/variants` _and_ dumps the link to a pdf into `/pdfs`

@@ -17,7 +17,7 @@ load_dotenv()
 
 # Model configuration
 LIGHTWEIGHT_MODEL = "deepseek/deepseek-chat-v3-0324"  # For extraction tasks
-HEAVY_DUTY_MODEL = "google/gemini-2.5-pro"  # For CV tailoring
+HEAVY_DUTY_MODEL = "google/gemini-3-pro-preview"  # For CV tailoring
 
 
 # Color output functions

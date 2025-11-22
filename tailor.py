@@ -252,6 +252,7 @@ CRITICAL RULES:
 8. Prefer to compress the CV to be as short as possible, but without losing important information
 9. DO NOT use markdown syntax (e.g. **xyz**, _abc_, #heading). Use LaTeX, e.g. \\textbf{xyz}
 10. DO NOT mention the company name, or mention projects/results if they don't improve the overall picture. For example, you might want to mention "used AdamW with weight decay" only if the position is concerned with some research on precisely AdamW, since it's an assumption that everybody uses AdamW to train models these days.
+11. Try to keep the CV as concise as possible; the HR does not have the time to read through the whole thing!
 
 Your output must be valid LaTeX that can be directly compiled."""
 
@@ -293,7 +294,9 @@ Your output must be valid LaTeX that can be directly compiled."""
         }
     )
 
-    response = client.chat.completions.create(model=model_name, messages=messages)
+    response = client.chat.completions.create(
+        model=model_name, messages=messages, extra_body={"reasoning": {"enabled": True}}
+    )
     generated_content = response.choices[0].message.content.strip()
 
     # Post-process: Extract LaTeX code from markdown blocks if present

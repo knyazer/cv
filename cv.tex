@@ -4,7 +4,9 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{eurosym}
 \usepackage{fontawesome5}
+\DeclareUnicodeCharacter{202F}{\,}
 
 \geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1cm}
 \pagenumbering{gobble}
@@ -54,42 +56,45 @@
 \vspace{-3mm}
 
 \sectiontitle{Summary}
-\noindent
-MPhil in Machine Learning student at the University of Cambridge with research in robotics, reinforcement learning, and deep learning.
-Experienced in developing and scaling novel algorithms, with hands-on experience in JAX,
-Python, and C++. Led research projects in robotics, AutoML, quantization and speculative decoding.
+
+Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robotics. My side interests include PL theory, philosophy of science and AI Safety.
 
 \sectiontitle{Education}
 
-\entrytitle{MPhil in MLMI (Machine Learning)}{University of Cambridge}{10/2025 - 08/2026}
+\entrytitle{MPhil in MLMI (Machine Learning)}{University of Cambridge}{10/2025 – 09/2026}
 
-\entrytitle{BSc Computer Science and Engineering}{TU Delft}{09/2022 - 07/2025}
-\begin{details}
-    \item GPA: 8.7/10. Cum Laude + Honours.
-\end{details}
+\entrytitle{BSc Computer Science and Engineering + Honours}{TU Delft}{09/2022 – 07/2025}
 
 \sectiontitle{Work Experience}
 
-\entrytitle{Research Engineer}{Mirai}{01/2026 - now}
+\entrytitle{Research Engineer}{Mirai Labs}{01/2026 – now}
 \begin{details}
-    \item R\&D across the inference stack for a high-performance inference engine targeting Apple devices.
-    \item Worked on quantization (YAQA, quantization-aware training), speculative decoding (EAGLE, embedding decompositions),
-    and optimizer exploration (Muon, SWA, modular learning theory).
+    \item Introducing a few heuristics into YAQA algorithm to improve PTQ quality.
+    \item Helping with building the QAT/QAD pipeline.
+    \item Leading the KV-Cache compression efforts.
+    \item Evals science.
 \end{details}
 
-\entrytitle{Research Associate}{TU Delft}{03/2023 - 08/2025}
+\entrytitle{Research Associate}{TU Delft}{03/2023 – 08/2025}
 \begin{details}
-    \item Collaborated on research in AutoML and Meta Learning; developed IEFT-PFN, a transformer-based model
-    for hyperparameter optimization achieving 15-20\% improvement over the IFBO baseline.
-    \item Investigated and presented on advanced optimization methods (e.g. Shampoo) and generative models.
+    \item Developed a transformer‑based Prior‑Data Fitted Network (PFN) for hyperparameter optimization, achieving 15–20\% improvement over the current SOTA.
+    \item Presented a deep dive on the modern view on first-order oracle optimizers (Bernstein et al.), showing its connection to proximal gradient descent.
 \end{details}
 
-\entrytitle{Student Team ML Lead}{Delft Mercurians}{05/2023 - 09/2025}
+\entrytitle{Student Team ML Lead}{Delft Mercurians}{05/2023 – 09/2025}
 \begin{details}
-    \item Led ML development for an autonomous robot soccer team (RoboCup Small Size League).
-    \item Developed a real-time Model Predictive Control system running on hardware at 15ms latency, with Rust-to-Python bindings via PyO3.
-    \item Built a continuous-time differentiable physics simulator from scratch in JAX and Equinox.
+    \item Led machine learning for an autonomous robot soccer team (RoboCup Small Size League).
+    \item Deployed a real‑time Model Predictive Control system on hardware (15 ms latency), interfacing Python with Rust via PyO3.
 \end{details}
+
+\sectiontitle{Projects}
+\begin{itemize}
+    \item \href{https://github.com/DelftMercurians/cotix}{\textbf{Continuous-time Differentiable Simulator (2023):}} Implementation of a small BRAX-like physics engine in JAX, with simple solvers and better multi-body support. Continuous-time functionality never arrived.
+    \item \href{https://github.com/knyazer/weather-magic}{\textbf{Weather Forecasting System (2024):}} A small subscriber-based system that aggregated weather data from various sources, and used a bunch of ML to bet on weather on Polymarket. Returned 5k\$ before being squeezed out.
+    \item \href{https://github.com/knyazer/SABT}{\textbf{Stack Associated Beam Tracing (2022):}} Likely fastest* octree tracing/rendering algorithm at the time.
+    \item \href{https://github.com/knyazer/dimlint}{\textbf{Python Abstract Interpreter (2025):}} Rust-based prototype of a Python abstract interepreter. WIP.
+    \item \href{https://github.com/knyazer/DOT-STM32}{\textbf{Robotics (2015-2026):}} I've been writing code for various robots and embedded systems for 11 years now, mostly in C/C++. Recently moved on to more applied ML side.
+\end{itemize}
 
 \sectiontitle{Honours and Awards}
 \begin{itemize}

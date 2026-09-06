@@ -5,12 +5,12 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{eurosym}
-\usepackage{fontawesome5}
 \DeclareUnicodeCharacter{202F}{\,}
 
 \geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1cm}
 \pagenumbering{gobble}
-\definecolor{primaryColor}{RGB}{0, 102, 204}
+\definecolor{primaryColor}{HTML}{002147}
+\definecolor{linkColor}{HTML}{A64B2A}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1.0ex}
@@ -31,10 +31,10 @@
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=primaryColor,
-    filecolor=primaryColor,
-    urlcolor=primaryColor,
-    citecolor=primaryColor,
+    linkcolor=linkColor,
+    filecolor=linkColor,
+    urlcolor=linkColor,
+    citecolor=linkColor,
 }
 
 \setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*}
@@ -44,20 +44,14 @@
 
 \begin{document}
 
-\begin{center}
-    \LARGE{\textbf{\color{primaryColor}Roman Knyazhitskiy}}\\
-    \vspace{2mm}
-    \normalsize{
-        \faEnvelope~\href{mailto:cv@knyaz.tech}{cv@knyaz.tech} \quad|\quad
-        \faGlobe~\href{https://knyaz.tech}{knyaz.tech} \quad|\quad
-        \faGithub~\href{https://github.com/knyazer}{knyazer}
-    }
-\end{center}
-\vspace{-3mm}
+{\LARGE\bfseries\color{primaryColor}Roman Knyazhitskiy\par}
+\href{mailto:cv@knyaz.tech}{cv@knyaz.tech}\hspace{0.75em}
+\href{https://github.com/knyazer}{github.com/knyazer}
+\par\vspace{2mm}
 
 \sectiontitle{Summary}
 
-Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robotics. My side interests include PL theory, philosophy of science and AI Safety.
+Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robotics. My side interests include abstract interpretation, philosophy of science and AI Safety.
 
 \sectiontitle{Education}
 
@@ -69,14 +63,14 @@ Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robo
 
 \entrytitle{Research Engineer}{Mirai Labs}{01/2026 – now}
 \begin{details}
-    \item Worked on post-training quantization, speculative decoding, continuous batching and automatic batchsize estimation.
-    \item Led the efforts to setup proper evaluation pipelines for our quantized models.
+    \item Lead post-training quantization, achieving lower held-out KL than Unsloth at matched bpw.
+    \item Responsible for the full evaluation suite; assembled our main training data mixture.
+    \item Contributed across the research stack.
 \end{details}
 
 \entrytitle{Research Associate}{TU Delft}{03/2023 – 08/2025}
 \begin{details}
     \item Developed a transformer‑based Prior‑Data Fitted Network (PFN) for hyperparameter optimization, achieving 15–20\% improvement over the current SOTA.
-    \item Presented a deep dive on the modern view on first-order oracle optimizers (Bernstein et al.), showing its connection to proximal gradient descent.
 \end{details}
 
 \entrytitle{Student Team ML Lead}{Delft Mercurians}{05/2023 – 09/2025}
@@ -87,8 +81,8 @@ Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robo
 
 \sectiontitle{Projects}
 \begin{itemize}
-    \item \href{https://github.com/DelftMercurians/cotix}{\textbf{Continuous-time Differentiable Simulator (2023):}} Implementation of a small BRAX-like physics engine in JAX, with simple solvers and better multi-body support.
-    \item \href{https://github.com/knyazer/SABT}{\textbf{Stack Associated Beam Tracing (2022):}} Likely saymptotically fastest octree tracing/rendering algorithm at the time.
+    \item \href{https://github.com/DelftMercurians/cotix}{Continuous-time Differentiable Simulator (2023)}: Implementation of a small BRAX-like physics engine in JAX, with simple solvers and better multi-body support.
+    \item \href{https://github.com/knyazer/SABT}{Stack Associated Beam Tracing (2022)}: Likely saymptotically fastest octree tracing/rendering algorithm at the time.
 \end{itemize}
 
 \sectiontitle{Honours and Awards}
@@ -101,7 +95,6 @@ Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robo
 \sectiontitle{Other}
 \begin{itemize}
     \item Contributed to \href{https://github.com/patrick-kidger/jaxtyping/commit/f454cb797c7ecf71740a19dc637b795abe75db0c}{jaxtyping}, \href{https://github.com/patrick-kidger/equinox/pull/836}{Equinox} and \href{https://github.com/beartype/beartype/issues/492#issuecomment-2647183795}{beartype} stack, attempting to improve runtime typechecking for users of IPython notebooks.
-    \item I am a member of Meridian, an AI Safety Hub in Cambridge; indirectly contributed to work on preventing Evaluation Awareness in LLMs.
 \end{itemize}
 
 \sectiontitle{Publications}
@@ -110,6 +103,9 @@ Research Engineer at Mirai Labs, enjoying efficient ML, learning theory and robo
 \renewcommand{\refname}{\vspace{-\baselineskip}}
 \bibliographystyle{unsrt}
 \nocite{*}
+\begingroup
+\small
 \bibliography{pub}
+\endgroup
 
 \end{document}
